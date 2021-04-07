@@ -11,8 +11,6 @@ class LoginUser(models.Model):
     name = models.CharField(verbose_name="이름", max_length=20, null=False, default=False)
     age = models.IntegerField(verbose_name="나이", default=20)
 
-    objects = models.Manager()
-
     class Meta:
         db_table = 'login_user'
         verbose_name = '로그인 테스트 테이블'

@@ -27,7 +27,7 @@ class Todo(APIView):
         task_list = []
         for task in tasks:
             task_list.append(dict(name=task.name, start_date=task.start_date, end_date=task.end_date, state=task.state))
-        context=dict(task_list=task_list)
+        context = dict(task_list=task_list)
         return render(request, 'todo/todo.html', context=context)
 
 

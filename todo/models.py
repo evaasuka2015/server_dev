@@ -11,8 +11,6 @@ class Task(models.Model):
     finish_date = models.DateField(verbose_name="완료날짜", null=True)
     state = models.IntegerField(verbose_name="상태", null=False, default=0)
 
-    objects = models.Manager()
-
     class Meta:
         db_table = 'task'
         verbose_name = '작업(to-do) 테이블'
